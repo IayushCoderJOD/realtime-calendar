@@ -1,0 +1,137 @@
+*{
+  background-color: rgb(51, 0, 85);
+  color: white;
+}
+.outerContainer {
+  width: 100%;
+  text-align: left;
+  margin: auto;
+}
+
+.calendarContainer {
+  width: 100%;
+  text-align: left;
+  margin: auto;
+}
+
+.attendanceHeader {
+  padding: 1%;
+}
+.attendanceInstructionContainer {
+  width: 97vw;
+  margin: auto;
+  background-color: rgb(102, 5, 167);
+}
+.attendanceInst2{
+  background-color: rgb(102, 5, 167);
+
+}
+.attendanceInstruction .attendanceInst1 {
+  padding: 2vh;
+}
+
+.attendanceInstruction .attendanceInst2 {
+  display: inline;
+}
+
+.prevMonthRow,
+.currentMonthRow,
+.nextMonthRow {
+background-color: rgb(173, 143, 204); /* Light purple color */
+}
+
+.dates {
+border: none;
+}
+
+/* Add a 2px border only to the "currentMonthToday" class */
+.dates.currentMonthToday {
+border: 2px solid rgb(255, 255, 255); /* You can change the color to your preference */
+}
+
+/* Remove borders specifically from dates in previous and next months */
+.otherMonth {
+border: none !important;
+}
+
+/* Remove the border for all dates */
+.dates {
+border: none;
+}
+
+/* Add a 2px border to the "currentMonthToday" class */
+.dates.currentMonthToday {
+border: 2px solid rgb(255, 255, 255); /* You can change the color to your preference */
+}
+
+
+
+.checkInBtn,
+.checkOutBtn {
+  width: 7vw;
+  margin: 2vh;
+  color: black;
+  height: max-content;
+  border: none;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.calendarTable {
+  margin-top: 20px;
+  border: 2px;
+  width: 100%;
+}
+
+.calendarNavigation {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendarNavigation .prev,
+.calendarNavigation .next,
+.calendarNavigation .today {
+  cursor: pointer;
+  padding-right: 80px; 
+  padding-left: 80px;
+}
+
+.calendarCurrentDate {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendarBody {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.weekdays,
+.dates {
+  display: table-cell;
+  padding: 10px;
+}
+
+.weekdays {
+  font-weight: bold;
+}
+
+.dates {
+  cursor: pointer;
+  display: table-cell;
+}
+
+.dates.lightgreen {
+  background-color: rgb(51, 0, 85);
+}
+
+.dates.lightblue {
+  background-color: rgb(102, 5, 167);
+}
+
+
