@@ -1,0 +1,136 @@
+.outerContainer {
+    width: 100%;
+    text-align: left;
+    margin: auto;
+  }
+  
+  .calendarContainer {
+    width: 100%;
+    text-align: left;
+    margin: auto;
+  }
+  
+  .attendanceHeader {
+    padding: 1%;
+  }
+  
+  .bg-green {
+    background-color: green;
+  }
+  
+  
+  .attendanceInstructionContainer {
+    width: 97vw;
+    margin: auto;
+    background-color: rgb(243, 245, 248);
+  }
+  
+  .attendanceInstruction .attendanceInst1 {
+    padding: 2vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .attendanceInstruction .attendanceInst2 {
+    padding: 2vh;
+    display: inline;
+  }
+  
+  .checkInBtn,
+  .checkOutBtn {
+    font-size: larger;
+    width: 7vw;
+    margin: 2vh 4vh;
+    padding: 2vh 0;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkInBtn:hover,
+  .checkOutBtn:hover {
+    background-color: rgb(83, 119, 253);
+  }
+  
+  .calendarTable {
+    width: 97vw;
+    margin: auto;
+    margin-top: 3vh;
+    border: 2px;
+    width: 97vw;
+  }
+  
+  .calendarNavigation {
+    padding: 1vh 2vh;
+    margin-bottom: 0;
+    background-color: rgb(83, 119, 253);
+    color: white;
+  }
+  
+  .calendarNavigation .prev {
+    margin-left: 0;
+    cursor: pointer;
+  }
+  
+  .calendarNavigation .today {
+    margin: 0 45%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .calendarNavigation .next {
+    margin-right: 0;
+    cursor: pointer;
+  }
+  
+  .calendarCurrentDate {
+    background-color: rgb(243, 245, 248);
+    margin: 0;
+    padding: 1vh 2vh;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .calendarBody {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .calendarBody .weekdays,
+  .calendarBody .dates {
+    display: table-cell;
+    padding: 10px;
+  }
+  
+  .calendarBody .weekdays {
+    font-weight: bold;
+  }
+  
+  .calendarBody .dates {
+    cursor: pointer;
+    display: table-cell;
+  }
+  
+  .calendarBody .oddRow {
+    background-color: rgb(243, 245, 248);
+  }
+  
+  .calendarBody .evenRow {
+    background-color: white;
+  }
+  .currentDateCell {
+    background-color: rgb(243, 245, 248);
+  }
+
+  .currentBorder {
+    border: 2px solid black;
+  }
+  
+
+
+
+
+  /* 1. added css for border */
+  /* 2. change the handleclick function */

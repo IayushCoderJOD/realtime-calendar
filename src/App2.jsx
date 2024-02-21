@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "../src/loader2.css";
+import React, { useState, useEffect } from 'react';
+import '../src/loader.css';
 import axios from "axios";
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [todayDate, setTodayDate] = useState(new Date());
-  const [clickedCheckIn, setClickedCheckIn] = useState(false);
   const empId = "15";
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -25,10 +24,8 @@ const Calendar = () => {
 
   const month = currentDate.getMonth();
   const year = currentDate.getFullYear();
-  const formatDate = `${currentDate.toLocaleString("default", {
-    month: "long",
-    year: "numeric",
-  })}`;
+  const formatDate = `${currentDate.toLocaleString('default', { month: 'long', year: 'numeric' })
+    }`;
 
   const getMonthDays = () => {
     const daysInMonth = getLastDayOfMonth(year, month);
@@ -57,18 +54,20 @@ const Calendar = () => {
     return rows.map((row, rowIndex) => (
       <tr key={rowIndex}>
         {row.map((day, index) => (
+
           <td
             key={index}
-            className={`dates ${day === currentDate.getDate() ? "today" : ""} ${
-              rowIndex % 2 === 0 ? "oddRow" : "evenRow"
-            }`}
+            className={`dates ${day === currentDate.getDate() ? "today" : ""} ${rowIndex % 2 === 0 ? "oddRow" : "evenRow"
+              }`}
           >
             {day !== "" && day}
           </td>
+
         ))}
       </tr>
     ));
   };
+
 
   const markAttendance = async (value) => {
     const res = await axios.post("http://localhost:3000/attendance", {
@@ -81,7 +80,9 @@ const Calendar = () => {
   const handleClick = async (value) => {
     console.log(value);
     if (value === "checkIn") {
-      const currentDateCell = document.querySelector(`.dates.today`);
+      const currentDateCell = document.querySelector(
+        `.dates.today`
+      );
       if (currentDateCell) {
         currentDateCell.style.backgroundColor = "rgb(60, 255, 60)";
         currentDateCell.style.border = "2px solid black";
@@ -91,8 +92,9 @@ const Calendar = () => {
   };
 
   const handlePrevMonth = () => {
-    setClickedCheckIn(true);
-    const currentDateCell = document.querySelector(`.dates.today`);
+    const currentDateCell = document.querySelector(
+      `.dates.today`
+    );
     if (currentDateCell) {
       currentDateCell.style.backgroundColor = "";
       currentDateCell.style.border = "";
@@ -104,9 +106,10 @@ const Calendar = () => {
   };
 
   const handleNextMonth = () => {
-    setClickedCheckIn(true);
 
-    const currentDateCell = document.querySelector(`.dates.today`);
+    const currentDateCell = document.querySelector(
+      `.dates.today`
+    );
     if (currentDateCell) {
       currentDateCell.style.backgroundColor = "";
       currentDateCell.style.border = "";
@@ -135,20 +138,10 @@ const Calendar = () => {
               use the edit option below.
             </p>
           </span>
-          <button
-            className="checkInBtn"
-            onClick={() => {
-              handleClick("checkIn");
-            }}
-          >
+          <button className="checkInBtn" onClick={() => { handleClick("checkIn") }}>
             CHECK IN
           </button>
-          <button
-            className="checkOutBtn"
-            onClick={() => {
-              handleClick("checkOut");
-            }}
-          >
+          <button className="checkOutBtn" onClick={() => { handleClick("checkOut") }}>
             CHECK OUT
           </button>
         </div>
@@ -178,7 +171,7 @@ const Calendar = () => {
           </table>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
